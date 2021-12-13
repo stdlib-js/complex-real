@@ -1,7 +1,7 @@
 {
   "name": "@stdlib/complex-real",
   "version": "0.0.6",
-  "description": "Return the real component of a complex number.",
+  "description": "Return the real component of a double-precision complex floating-point number.",
   "license": "Apache-2.0",
   "author": {
     "name": "The Stdlib Authors",
@@ -37,12 +37,12 @@
     "url": "https://github.com/stdlib-js/stdlib/issues"
   },
   "dependencies": {
-    "@stdlib/types": "^0.0.x"
+    "@stdlib/complex-float64": "^0.0.x",
+    "@stdlib/types": "^0.0.x",
+    "@stdlib/utils-library-manifest": "^0.0.x"
   },
   "devDependencies": {
     "@stdlib/bench": "^0.0.x",
-    "@stdlib/complex-float32": "^0.0.x",
-    "@stdlib/complex-float64": "^0.0.x",
     "@stdlib/math-base-assert-is-nan": "^0.0.x",
     "@stdlib/math-base-special-round": "^0.0.x",
     "@stdlib/random-base-randu": "^0.0.x",

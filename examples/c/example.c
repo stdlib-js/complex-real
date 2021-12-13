@@ -1,7 +1,7 @@
 /**
 * @license Apache-2.0
 *
-* Copyright (c) 2018 The Stdlib Authors.
+* Copyright (c) 2021 The Stdlib Authors.
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -16,28 +16,20 @@
 * limitations under the License.
 */
 
-'use strict';
+#include "stdlib/complex/real.h"
+#include "stdlib/complex/float64.h"
+#include <stdio.h>
 
-/**
-* Return the real component of a double-precision complex floating-point number.
-*
-* @module @stdlib/complex-real
-*
-* @example
-* var Complex128 = require( '@stdlib/complex-float64' );
-* var real = require( '@stdlib/complex-real' );
-*
-* var z = new Complex128( 5.0, 3.0 );
-*
-* var re = real( z );
-* // returns 5.0
-*/
+int main() {
+	stdlib_complex128_t x[] = {
+		stdlib_complex128( 5.0, 2.0 ),
+		stdlib_complex128( -2.0, 1.0 ),
+		stdlib_complex128( 0.0, -0.0 ),
+		stdlib_complex128( 0.0/0.0, 0.0/0.0 )
+	};
 
-// MODULES //
-
-var main = require( './main.js' );
-
-
-// EXPORTS //
-
-module.exports = main;
+	int i;
+	for ( i = 0; i < 4; i++ ) {
+		printf( "real(v) = %lf\n", stdlib_real( x[ i ] ) );
+	}
+}

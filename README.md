@@ -22,7 +22,7 @@ limitations under the License.
 
 [![NPM version][npm-image]][npm-url] [![Build Status][test-image]][test-url] [![Coverage Status][coverage-image]][coverage-url] <!-- [![dependencies][dependencies-image]][dependencies-url] -->
 
-> Return the real component of a complex number.
+> Return the real component of a double-precision complex floating-point number.
 
 <!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
 
@@ -54,7 +54,7 @@ var real = require( '@stdlib/complex-real' );
 
 #### real( z )
 
-Returns the **real** component of a `complex` number.
+Returns the **real** component of a double-precision complex floating-point number.
 
 ```javascript
 var Complex128 = require( '@stdlib/complex-float64' );
@@ -106,6 +106,111 @@ for ( i = 0; i < 100; i++ ) {
 </section>
 
 <!-- /.examples -->
+
+<!-- C interface documentation. -->
+
+* * *
+
+<section class="c">
+
+## C APIs
+
+<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
+
+<section class="intro">
+
+</section>
+
+<!-- /.intro -->
+
+<!-- C usage documentation. -->
+
+<section class="installation">
+
+## Installation
+
+```bash
+npm install @stdlib/complex-real
+```
+
+</section>
+
+<section class="usage">
+
+### Usage
+
+```c
+#include "stdlib/complex/real.h"
+```
+
+#### stdlib_real( z )
+
+Returns the real component of a double-precision complex floating-point number.
+
+```c
+#include "stdlib/complex/float64.h"
+
+stdlib_complex128_t z = stdlib_complex128( 5.0, 2.0 );
+
+// ...
+
+double re = stdlib_real( z );
+// returns 5.0
+```
+
+The function accepts the following arguments:
+
+-   **z**: `[in] stdlib_complex128_t` double-precision complex floating-point number.
+
+```c
+double stdlib_real( const stdlib_complex128_t z );
+```
+
+</section>
+
+<!-- /.usage -->
+
+<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
+<section class="notes">
+
+</section>
+
+<!-- /.notes -->
+
+<!-- C API usage examples. -->
+
+<section class="examples">
+
+### Examples
+
+```c
+#include "stdlib/complex/real.h"
+#include "stdlib/complex/float64.h"
+#include <stdio.h>
+
+int main() {
+    stdlib_complex128_t x[] = {
+        stdlib_complex128( 5.0, 2.0 ),
+        stdlib_complex128( -2.0, 1.0 ),
+        stdlib_complex128( 0.0, -0.0 ),
+        stdlib_complex128( 0.0/0.0, 0.0/0.0 )
+    };
+
+    int i;
+    for ( i = 0; i < 4; i++ ) {
+        printf( "real(v) = %lf\n", stdlib_real( x[ i ] ) );
+    }
+}
+```
+
+</section>
+
+<!-- /.examples -->
+
+</section>
+
+<!-- /.c -->
 
 <!-- Section to include cited references. If references are included, add a horizontal rule *before* the section. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
 
