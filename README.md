@@ -34,30 +34,14 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/complex-real
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm` branch][esm-url].
--   If you are using Deno, visit the [`deno` branch][deno-url].
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd` branch][umd-url].
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-var real = require( '@stdlib/complex-real' );
+import real from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-real@esm/index.mjs';
 ```
 
 #### real( z )
@@ -65,7 +49,7 @@ var real = require( '@stdlib/complex-real' );
 Returns the **real** component of a double-precision complex floating-point number.
 
 ```javascript
-var Complex128 = require( '@stdlib/complex-float64' );
+import Complex128 from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float64@esm/index.mjs';
 
 var z = new Complex128( 5.0, 3.0 );
 var re = real( z );
@@ -92,11 +76,16 @@ var re = real( z );
 
 <!-- eslint no-undef: "error" -->
 
-```javascript
-var Complex128 = require( '@stdlib/complex-float64' );
-var randu = require( '@stdlib/random-base-randu' );
-var round = require( '@stdlib/math-base-special-round' );
-var real = require( '@stdlib/complex-real' );
+```html
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script type="module">
+
+import Complex128 from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float64@esm/index.mjs';
+import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@esm/index.mjs';
+import round from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-round@esm/index.mjs';
+import real from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-real@esm/index.mjs';
 
 var re;
 var im;
@@ -109,6 +98,10 @@ for ( i = 0; i < 100; i++ ) {
     z = new Complex128( re, im );
     console.log( 'real(%s) = %d', z.toString(), real( z ) );
 }
+
+</script>
+</body>
+</html>
 ```
 
 </section>
@@ -117,98 +110,7 @@ for ( i = 0; i < 100; i++ ) {
 
 <!-- C interface documentation. -->
 
-* * *
 
-<section class="c">
-
-## C APIs
-
-<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
-
-<section class="intro">
-
-</section>
-
-<!-- /.intro -->
-
-<!-- C usage documentation. -->
-
-<section class="usage">
-
-### Usage
-
-```c
-#include "stdlib/complex/real.h"
-```
-
-#### stdlib_real( z )
-
-Returns the real component of a double-precision complex floating-point number.
-
-```c
-#include "stdlib/complex/float64.h"
-
-stdlib_complex128_t z = stdlib_complex128( 5.0, 2.0 );
-
-// ...
-
-double re = stdlib_real( z );
-// returns 5.0
-```
-
-The function accepts the following arguments:
-
--   **z**: `[in] stdlib_complex128_t` double-precision complex floating-point number.
-
-```c
-double stdlib_real( const stdlib_complex128_t z );
-```
-
-</section>
-
-<!-- /.usage -->
-
-<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
-
-<section class="notes">
-
-</section>
-
-<!-- /.notes -->
-
-<!-- C API usage examples. -->
-
-<section class="examples">
-
-### Examples
-
-```c
-#include "stdlib/complex/real.h"
-#include "stdlib/complex/float64.h"
-#include <stdio.h>
-
-int main() {
-    stdlib_complex128_t x[] = {
-        stdlib_complex128( 5.0, 2.0 ),
-        stdlib_complex128( -2.0, 1.0 ),
-        stdlib_complex128( 0.0, -0.0 ),
-        stdlib_complex128( 0.0/0.0, 0.0/0.0 )
-    };
-
-    int i;
-    for ( i = 0; i < 4; i++ ) {
-        printf( "real(v) = %lf\n", stdlib_real( x[ i ] ) );
-    }
-}
-```
-
-</section>
-
-<!-- /.examples -->
-
-</section>
-
-<!-- /.c -->
 
 <!-- Section to include cited references. If references are included, add a horizontal rule *before* the section. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
 
@@ -242,7 +144,7 @@ int main() {
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -304,9 +206,9 @@ Copyright &copy; 2016-2022. The Stdlib [Authors][stdlib-authors].
 
 <!-- <related-links> -->
 
-[@stdlib/complex/imag]: https://github.com/stdlib-js/complex-imag
+[@stdlib/complex/imag]: https://github.com/stdlib-js/complex-imag/tree/esm
 
-[@stdlib/complex/reim]: https://github.com/stdlib-js/complex-reim
+[@stdlib/complex/reim]: https://github.com/stdlib-js/complex-reim/tree/esm
 
 <!-- </related-links> -->
 
