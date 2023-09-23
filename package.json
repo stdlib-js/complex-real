@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/complex-real",
-  "version": "0.0.7",
+  "version": "0.1.0",
   "description": "Return the real component of a double-precision complex floating-point number.",
   "license": "Apache-2.0",
   "author": {
@@ -39,14 +39,14 @@
     "url": "https://github.com/stdlib-js/stdlib/issues"
   },
   "dependencies": {
-    "@stdlib/complex-float64": "^0.0.8",
-    "@stdlib/types": "^0.0.14",
-    "@stdlib/utils-library-manifest": "^0.0.8"
+    "@stdlib/complex-float64": "^0.1.0",
+    "@stdlib/types": "^0.1.0",
+    "@stdlib/utils-library-manifest": "^0.1.0"
   },
   "devDependencies": {
-    "@stdlib/bench": "^0.0.12",
-    "@stdlib/math-base-assert-is-nan": "^0.0.8",
-    "@stdlib/math-base-special-round": "^0.0.7",
+    "@stdlib/bench": "^0.1.0",
+    "@stdlib/math-base-assert-is-nan": "^0.1.0",
+    "@stdlib/math-base-special-round": "^0.1.0",
     "@stdlib/random-base-randu": "^0.0.8",
     "tape": "git+https://github.com/kgryte/tape.git#fix/globby",
     "istanbul": "^0.4.1",
