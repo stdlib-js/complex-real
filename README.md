@@ -52,7 +52,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import real from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-real@esm/index.mjs';
+import real from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-real@v0.1.0-esm/index.mjs';
 ```
 
 #### real( z )
@@ -96,7 +96,7 @@ var re = real( z );
 import Complex128 from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-float64@esm/index.mjs';
 import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@esm/index.mjs';
 import round from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-round@esm/index.mjs';
-import real from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-real@esm/index.mjs';
+import real from 'https://cdn.jsdelivr.net/gh/stdlib-js/complex-real@v0.1.0-esm/index.mjs';
 
 var re;
 var im;
