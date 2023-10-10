@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2021 The Stdlib Authors.
@@ -16,20 +16,29 @@
 * limitations under the License.
 */
 
-#include "stdlib/complex/real.h"
-#include "stdlib/complex/float64.h"
-#include <stdio.h>
+// TypeScript Version: 4.1
 
-int main( void ) {
-	const stdlib_complex128_t x[] = {
-		stdlib_complex128( 5.0, 2.0 ),
-		stdlib_complex128( -2.0, 1.0 ),
-		stdlib_complex128( 0.0, -0.0 ),
-		stdlib_complex128( 0.0/0.0, 0.0/0.0 )
-	};
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@main/index.d.ts"/>
 
-	int i;
-	for ( i = 0; i < 4; i++ ) {
-		printf( "real(v) = %lf\n", stdlib_real( x[ i ] ) );
-	}
-}
+import { Complex128 } from '@stdlib/types/complex';
+
+/**
+* Returns the real component of a double-precision complex floating-point number.
+*
+* @param z - complex number
+* @returns real component
+*
+* @example
+* var Complex128 = require( `@stdlib/complex/float64` );
+*
+* var z = new Complex128( 5.0, 3.0 );
+*
+* var re = real( z );
+* // returns 5.0
+*/
+declare function real( z: Complex128 ): number;
+
+
+// EXPORTS //
+
+export = real;
