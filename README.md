@@ -78,7 +78,7 @@ var real = require( '@stdlib/complex-real' );
 Returns the **real** component of a double-precision complex floating-point number.
 
 ```javascript
-var Complex128 = require( '@stdlib/complex-float64' );
+var Complex128 = require( '@stdlib/complex-float64-ctor' );
 
 var z = new Complex128( 5.0, 3.0 );
 var re = real( z );
@@ -106,7 +106,7 @@ var re = real( z );
 <!-- eslint no-undef: "error" -->
 
 ```javascript
-var Complex128 = require( '@stdlib/complex-float64' );
+var Complex128 = require( '@stdlib/complex-float64-ctor' );
 var randu = require( '@stdlib/random-base-randu' );
 var round = require( '@stdlib/math-base-special-round' );
 var real = require( '@stdlib/complex-real' );
@@ -159,7 +159,7 @@ for ( i = 0; i < 100; i++ ) {
 Returns the real component of a double-precision complex floating-point number.
 
 ```c
-#include "stdlib/complex/float64.h"
+#include "stdlib/complex/float64/ctor.h"
 
 stdlib_complex128_t z = stdlib_complex128( 5.0, 2.0 );
 
@@ -197,7 +197,7 @@ double stdlib_real( const stdlib_complex128_t z );
 
 ```c
 #include "stdlib/complex/real.h"
-#include "stdlib/complex/float64.h"
+#include "stdlib/complex/float64/ctor.h"
 #include <stdio.h>
 
 int main( void ) {
@@ -240,7 +240,7 @@ int main( void ) {
 ## See Also
 
 -   <span class="package-name">[`@stdlib/complex-imag`][@stdlib/complex/imag]</span><span class="delimiter">: </span><span class="description">return the imaginary component of a double-precision complex floating-point number.</span>
--   <span class="package-name">[`@stdlib/complex-reim`][@stdlib/complex/reim]</span><span class="delimiter">: </span><span class="description">return the real and imaginary components of a double-precision complex floating-point number.</span>
+-   <span class="package-name">[`@stdlib/complex-float64/reim`][@stdlib/complex/float64/reim]</span><span class="delimiter">: </span><span class="description">return the real and imaginary components of a double-precision complex floating-point number.</span>
 
 </section>
 
@@ -322,7 +322,7 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 
 [@stdlib/complex/imag]: https://github.com/stdlib-js/complex-imag
 
-[@stdlib/complex/reim]: https://github.com/stdlib-js/complex-reim
+[@stdlib/complex/float64/reim]: https://github.com/stdlib-js/complex-float64-reim
 
 <!-- </related-links> -->
 
